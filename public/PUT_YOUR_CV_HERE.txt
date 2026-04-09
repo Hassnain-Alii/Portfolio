@@ -1,4 +1,78 @@
-Place your CV file here named exactly: Hassnain_Ali_CV.pdf
+Hassnain Ali
+📍 Lahore, Panjab, Pakistan | 📞 +92 3026340597 | ✉️ hassnainalyy@gmail.com
+🔗 Portfolio: https://portfolio-hassnain-ali.vercel.app
+🔗 GitHub: https://github.com/Hassnain-Alii
+🔗 LinkedIn: https://www.linkedin.com/in/hassnain-alii
+________________________________________
+🚀 Profile
+Full Stack Developer with a strong backend engineering focus, experienced in building scalable, secure, and production-ready systems using Node.js, Express, and MongoDB. Specialized in designing authentication systems, caching strategies (Redis), and cloud-based storage architectures. Proven ability to translate complex requirements into efficient system designs with emphasis on performance, security, and maintainability.
+________________________________________
+🛠️ Technical Skills
+Backend Engineering
+Node.js, Express.js, REST API Design, Authentication (JWT, OAuth), Authorization, Middleware Architecture
+Frontend Development
+React.js, Tailwind CSS, JavaScript (ES6+), HTML, CSS
+Database & Storage
+MongoDB, Mongoose, Data Modeling, Cloud Storage (Supabase / S3-compatible systems)
+Performance & DevOps
+Redis (Caching), Docker, API Optimization, Deployment (Vercel), Compression & Rate Limiting
+________________________________________
+💼 Experience
+Full Stack Developer Intern — SolnetInfo
+Oct 2024 – Present
+•	Engineered modular backend APIs supporting authentication, user-specific data isolation, and scalable application logic
+•	Implemented secure JWT-based authentication with token validation and session handling
+•	Designed and optimized MongoDB schemas for efficient querying and structured data flow
+•	Applied middleware-based architecture for validation, error handling, and request control
+•	Identified and resolved performance bottlenecks through debugging and optimization techniques
+________________________________________
+🚀 Selected Projects
+Google Drive Enterprise Clone
+🔗 https://google-drive-ecru.vercel.app
+•	Architected a scalable file storage system supporting hierarchical folders and multi-file uploads
+•	Implemented Redis caching layer to significantly reduce database query load and improve response times
+•	Designed secure dual-token authentication (access + refresh) for session management
+•	Built server-side bulk download system using streaming and compression techniques
+•	Integrated cloud object storage for scalable and efficient file handling
+________________________________________
+GalleryPro – Image Platform (MERN)
+🔗 https://gallery-project-frontend.vercel.app
+•	Developed full-stack image hosting system with drag-and-drop upload and optimized rendering
+•	Implemented debounced search and efficient filtering for high-performance data retrieval
+•	Integrated Redis caching for frequently accessed data
+•	Designed secure authentication using Google OAuth and JWT verification
+•	Applied responsive UI architecture with performance-focused frontend design
+________________________________________
+TaskBoard – Kanban System (MERN)
+🔗 https://task-board-frontend-ten.vercel.app
+•	Built interactive Kanban system with drag-and-drop task management and real-time updates
+•	Designed backend APIs for efficient task lifecycle handling and state transitions
+•	Implemented filtering, prioritization, and analytics for task insights
+•	Optimized performance using Redis caching for repeated queries
+•	Delivered responsive UI with smooth interaction patterns
+________________________________________
 
-The download button in the portfolio will automatically download this file
-when clicked. Replace this placeholder with your actual CV PDF.
+
+
+⚙️ Additional Projects
+•	E-commerce platform with product management, cart system, and backend APIs
+•	Task & Notes management system with user-specific data isolation
+•	AI chatbot and multiple API-driven applications (weather, currency)
+•	Frontend system clones (Amazon, Daraz, eBay, Walmart) focusing on UI replication
+________________________________________
+⚡ Engineering Highlights
+•	Designed and implemented Redis caching strategies to minimize database load and improve API response performance
+•	Built secure authentication systems using JWT with refresh token rotation and session lifecycle management
+•	Architected scalable file storage solutions leveraging cloud object storage and efficient file handling patterns
+•	Applied backend security practices including input validation, rate limiting, and protection against common web vulnerabilities (XSS, injection)
+•	Structured modular backend architecture using middleware patterns for maintainability and scalability
+•	Optimized API performance using response compression and efficient query handling
+•	Implemented debouncing and optimized client-server interaction to reduce unnecessary network load
+•	Designed user-level data isolation to ensure secure multi-user environments
+•	Built production-style systems with separation of concerns across frontend, backend, and storage layers
+•	Applied logging and monitoring concepts to improve debugging and system observability
+________________________________________
+🎓 Education
+Bachelor of Software Engineering (In Progress)
+Virtual University of Pakistan
+
