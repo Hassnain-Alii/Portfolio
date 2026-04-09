@@ -52,8 +52,6 @@ TaskBoard – Kanban System (MERN)
 •	Delivered responsive UI with smooth interaction patterns
 ________________________________________
 
-
-
 ⚙️ Additional Projects
 •	E-commerce platform with product management, cart system, and backend APIs
 •	Task & Notes management system with user-specific data isolation
@@ -75,4 +73,3 @@ ________________________________________
 🎓 Education
 Bachelor of Software Engineering (In Progress)
 Virtual University of Pakistan
-
