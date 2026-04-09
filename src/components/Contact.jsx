@@ -9,9 +9,9 @@ import { Toast } from './ui/Toast';
 import { personalInfo } from '../data/portfolioData';
 
 
-const EMAILJS_SERVICE_ID = "service_a6xztc4";   
-const EMAILJS_TEMPLATE_ID = "template_7iazvui";  
-const EMAILJS_PUBLIC_KEY = "kVDQfEoYNm_tkd-Jg";    
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export const Contact = () => {
   const formRef = useRef(null);
