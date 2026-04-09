@@ -1,0 +1,4 @@
+Place your CV file here named exactly: Hassnain_Ali_CV.pdf
+
+The download button in the portfolio will automatically download this file
+when clicked. Replace this placeholder with your actual CV PDF.

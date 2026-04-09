@@ -48,6 +48,26 @@ function App() {
     });
   };
 
+  // ── Stunning Scrollbar Activity Logic ──
+  useEffect(() => {
+    let timeout;
+    const handleActivity = () => {
+      document.documentElement.classList.add("scrollbar-active");
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        document.documentElement.classList.remove("scrollbar-active");
+      }, 1500); // Hide after 1.5s of inactivity
+    };
+
+    window.addEventListener("scroll", handleActivity);
+    window.addEventListener("mousemove", handleActivity);
+    return () => {
+      window.removeEventListener("scroll", handleActivity);
+      window.removeEventListener("mousemove", handleActivity);
+      clearTimeout(timeout);
+    };
+  }, []);
+
   return (
     <>
       <CustomCursor />

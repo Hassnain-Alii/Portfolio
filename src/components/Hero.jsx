@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail, Terminal, Code2, Braces, Globe } from 'lucide-react';
+import { ArrowRight, Mail, Terminal, Code2, Braces, Globe, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { personalInfo } from '../data/portfolioData';
 import { Button } from './ui/Button';
+import { Toast } from './ui/Toast';
 
 // Animated floating code card shown on the right side of hero
 const FloatingCard = ({ children, className = '', delay = 0 }) => (
@@ -18,6 +19,22 @@ const FloatingCard = ({ children, className = '', delay = 0 }) => (
 );
 
 export const Hero = () => {
+  const [toast, setToast] = useState(null);
+
+  const handleDownloadCV = (e) => {
+    // Explicitly prevent default only if we want to handle the anchor click manually
+    // e.preventDefault(); 
+    
+    // We update the toast first
+    setToast({
+      type: 'success',
+      message: 'Download initiated successfully! Thank you for your interest.'
+    });
+
+    // Native browser behavior for <a href="..." download> is already robust, 
+    // but we ensure it works by making it the primary action.
+  };
+
   // Animated typing lines for the code panel
   const codeLines = [
     { text: 'const dev = {', color: 'text-white' },
@@ -36,66 +53,88 @@ export const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <>
+  
+      {/* Toast notification */}
+      {toast && (
+        <Toast
+          type={toast.type}
+          message={toast.message}
+          onClose={() => setToast(null)}
+        />
+      )}
 
-      {/* ── Background Animated Blobs ──
-          Fix: removed mix-blend-multiply (doesn't work on dark bg),
-          set explicit z-0 and boosted opacity so they are always visible */}
-      <div className="absolute top-[15%] left-[5%] w-96 h-96 bg-accent/40 rounded-full filter blur-[120px] opacity-70 animate-blob z-0 pointer-events-none"></div>
-      <div className="absolute top-[40%] right-[5%] w-96 h-96 bg-blue-600/40 rounded-full filter blur-[120px] opacity-70 animate-blob z-0 pointer-events-none" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute bottom-[10%] left-[35%] w-80 h-80 bg-purple-600/40 rounded-full filter blur-[100px] opacity-60 animate-blob z-0 pointer-events-none" style={{ animationDelay: '4s' }}></div>
+      <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
 
-      <div className="w-full px-6 md:px-12 xl:px-20 2xl:px-32 max-w-[2400px] mx-auto z-10 relative">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[80vh]">
+        {/* ── Background Animated Blobs ──
+            Fix: removed mix-blend-multiply (doesn't work on dark bg),
+            set explicit z-0 and boosted opacity so they are always visible */}
+        <div className="absolute top-[15%] left-[5%] w-96 h-96 bg-accent/40 rounded-full filter blur-[120px] opacity-70 animate-blob z-0 pointer-events-none"></div>
+        <div className="absolute top-[40%] right-[5%] w-96 h-96 bg-blue-600/40 rounded-full filter blur-[120px] opacity-70 animate-blob z-0 pointer-events-none" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-[10%] left-[35%] w-80 h-80 bg-purple-600/40 rounded-full filter blur-[100px] opacity-60 animate-blob z-0 pointer-events-none" style={{ animationDelay: '4s' }}></div>
 
-          {/* ── Left: Text Content ── */}
-          <div className="lg:w-1/2 xl:w-[55%]">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-accent font-medium tracking-wide mb-4 flex items-center gap-2">
-                <span className="w-8 h-px bg-accent"></span>
-                HELLO, I'M
-              </h2>
-            </motion.div>
+        <div className="w-full px-6 md:px-12 xl:px-20 2xl:px-32 max-w-[2400px] mx-auto z-10 relative">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[80vh]">
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-black mb-6 leading-tight"
-            >
-              {personalInfo.name.toUpperCase()}<br />
-              <span className="text-gradient">
-                {personalInfo.title.toUpperCase()}
-              </span>
-            </motion.h1>
+            {/* ── Left: Text Content ── */}
+            <div className="lg:w-1/2 xl:w-[55%]">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-accent font-medium tracking-wide mb-4 flex items-center gap-2">
+                  <span className="w-8 h-px bg-accent"></span>
+                  HELLO, I'M
+                </h2>
+              </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
-            >
-              I build pixel-perfect, highly performant web experiences.
-              Blending high-end design with robust engineering to deliver
-              exceptional digital products.
-            </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-black mb-6 leading-tight"
+              >
+                {personalInfo.name.toUpperCase()}<br />
+                <span className="text-gradient">
+                  {personalInfo.title.toUpperCase()}
+                </span>
+              </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-6"
-            >
-              <a href="#projects">
-                <Button variant="glow" magnetic>
-                  View My Work
-                  <ArrowRight size={18} />
-                </Button>
-              </a>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
+              >
+                I build pixel-perfect, highly performant web experiences.
+                Blending high-end design with robust engineering to deliver
+                exceptional digital products.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex flex-wrap items-center gap-6"
+              >
+                <a href="#projects">
+                  <Button variant="glow" magnetic>
+                    View My Work
+                    <ArrowRight size={18} />
+                  </Button>
+                </a>
+
+                {/* ── CV Download Button ── */}
+                <a
+                  href="/Hassnain_Ali_CV.pdf"
+                  download="Hassnain Ali CV"
+                  onClick={handleDownloadCV}
+                  className="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-white/20 text-gray-300 hover:border-accent hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 font-medium text-sm"
+                >
+                  <Download size={18} />
+                  Download CV
+                </a>
 
               <div className="flex items-center gap-4">
                 <a href={personalInfo.contact.github} target="_blank" rel="noopener noreferrer"
@@ -173,7 +212,7 @@ export const Hero = () => {
                 className="w-3 h-3 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]"
               />
               <span className="text-sm text-gray-300">
-                Available for freelance & full-time opportunities
+                Available for full-time opportunities
               </span>
             </FloatingCard>
           </div>
@@ -181,5 +220,6 @@ export const Hero = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };

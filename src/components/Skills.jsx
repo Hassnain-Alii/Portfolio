@@ -43,10 +43,9 @@ export const Skills = () => {
     ...skillsData.devops,
   ];
 
-  const half = Math.ceil(allSkills.length / 3);
+  const half = Math.ceil(allSkills.length / 2);
   const row1 = allSkills.slice(0, half);
-  const row2 = allSkills.slice(half, half * 2);
-  const row3 = allSkills.slice(half * 2);
+  const row2 = allSkills.slice(half);
 
   return (
     <section id="skills" className="py-24 relative bg-black/20 overflow-hidden">
@@ -72,11 +71,6 @@ export const Skills = () => {
 
         <CSSMarquee reverse>
           {row2.map((skill, index) => (
-            <SkillBox key={index} skill={skill} />
-          ))}
-        </CSSMarquee>
-        <CSSMarquee >
-          {row3.map((skill, index) => (
             <SkillBox key={index} skill={skill} />
           ))}
         </CSSMarquee>
