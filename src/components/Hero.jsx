@@ -45,11 +45,17 @@ export const Hero = () => {
 
   // Animated typing lines for the code panel
   const codeLines = [
-    { text: "const dev = {", color: "text-white" },
+    { text: "const developer = {", color: "text-white" },
     { text: "  name: 'Hassnain Ali',", color: "text-green-400" },
-    { text: "  role: 'MERN Developer',", color: "text-blue-400" },
-    { text: "  passion: '∞ building things',", color: "text-accent-light" },
-    { text: "  open_to_work: true,", color: "text-yellow-400" },
+    { text: "  role: 'AI Full Stack Dev',", color: "text-blue-400" },
+    { text: "  location: 'Pakistan',", color: "text-orange-400" },
+    { text: "  skills: {", color: "text-white" },
+    { text: "    backend: ['Node.js', 'Express'],", color: "text-accent-light" },
+    { text: "    frontend: ['React', 'Tailwind'],", color: "text-blue-300" },
+    { text: "    database: ['MongoDB', 'Redis'],", color: "text-emerald-400" },
+    { text: "    ai: ['Gemini', 'OpenRouter'],", color: "text-yellow-400" },
+    { text: "  },", color: "text-white" },
+    { text: "  open_to_work: true", color: "text-green-400" },
     { text: "};", color: "text-white" },
   ];
 
@@ -57,7 +63,7 @@ export const Hero = () => {
     { icon: <Terminal size={20} />, label: "Node.js", color: "text-green-400" },
     { icon: <Braces size={20} />, label: "React", color: "text-blue-400" },
     { icon: <Globe size={20} />, label: "MongoDB", color: "text-emerald-400" },
-    { icon: <Code2 size={20} />, label: "Express", color: "text-gray-300" },
+    { icon: <Code2 size={20} />, label: "Gemini AI", color: "text-yellow-400" },
   ];
 
   return (
@@ -122,9 +128,9 @@ export const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
               >
-                I build pixel-perfect, highly performant web experiences.
-                Blending high-end design with robust engineering to deliver
-                exceptional digital products.
+                I build AI-powered, high-performance web applications — blending
+                modern backend architecture with practical AI solutions to solve
+                real-world business problems.
               </motion.p>
 
               <motion.div
@@ -142,7 +148,7 @@ export const Hero = () => {
 
                 {/* ── CV Download Button ── */}
                 <a
-                  href="/Hassnain_Ali_CV.txt"
+                  href={`/Hassnain_Ali_CV.pdf?v=${Date.now()}`}
                   download="Hassnain Ali CV"
                   onClick={handleDownloadCV}
                   className="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-white/20 text-gray-300 hover:border-accent hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 font-medium text-sm"
@@ -181,7 +187,7 @@ export const Hero = () => {
             </div>
 
             {/* ── Right: Animated Visual Panel ── */}
-            <div className="lg:w-1/2 xl:w-[45%] hidden -mt-20 lg:flex flex-col items-center justify-center gap-6 relative">
+            <div className="lg:w-1/2 xl:w-[45%] hidden lg:flex flex-col items-center justify-center gap-6 relative">
               {/* Glow behind the panel */}
               <div className="absolute inset-0 bg-accent/10 rounded-3xl blur-3xl pointer-events-none"></div>
 

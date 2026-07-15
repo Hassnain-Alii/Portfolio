@@ -10,88 +10,116 @@ import {
 
 export const personalInfo = {
   name: "Hassnain Ali",
-  title: "Full Stack Developer (MERN & Backend-Focused)",
+  title: "AI-Focused Full Stack Developer",
   shortAbout:
-    "Full Stack Developer with hands-on experience building scalable web applications using Node.js, Express, MongoDB, and React. I specialize in backend systems, authentication, caching (Redis), and cloud storage integrations. I focus on building real-world, production-ready applications with strong performance and security practices.",
+    "AI-focused Full Stack Developer with strong expertise in backend engineering, intelligent workflow automation, and production-grade web application development. Experienced in building scalable MERN applications integrated with Large Language Models (LLMs), AI APIs, cloud services, authentication systems, Redis caching, and asynchronous processing. Passionate about designing secure, high-performance software that combines modern backend architecture with practical AI solutions to solve real-world business problems.",
   contact: {
     email: "hassnainalyy@gmail.com",
     phone: "+92 3026340597",
+    portfolio: "https://portfolio-hassnain-ali.vercel.app",
     github: "https://github.com/Hassnain-Alii",
     linkedin: "https://www.linkedin.com/in/hassnain-alii",
   },
 };
 
 export const skillsData = {
-  frontend: [
-    { name: "React.js", level: 85 },
-    { name: "Tailwind CSS", level: 90 },
-    { name: "JavaScript (ES6+)", level: 90 },
-    { name: "HTML & CSS", level: 95 },
-  ],
   backend: [
     { name: "Node.js", level: 90 },
     { name: "Express.js", level: 90 },
     { name: "REST APIs", level: 90 },
-    { name: "Authentication (JWT, OAuth)", level: 85 },
+    { name: "JWT & OAuth", level: 85 },
+    { name: "Middleware Architecture", level: 85 },
+  ],
+  frontend: [
+    { name: "React.js", level: 85 },
+    { name: "Vite", level: 85 },
+    { name: "EJS", level: 80 },
+    { name: "Tailwind CSS", level: 90 },
+    { name: "JavaScript (ES6+)", level: 90 },
+    { name: "HTML & CSS", level: 95 },
   ],
   database: [
     { name: "MongoDB", level: 90 },
     { name: "Mongoose", level: 90 },
+    { name: "Supabase / S3", level: 80 },
   ],
   devops: [
     { name: "Docker", level: 85 },
-    { name: "Redis", level: 85 },
-    { name: "Supabase", level: 80 },
-    { name: "Vercel Deployment", level: 85 },
+    { name: "Docker Compose", level: 80 },
+    { name: "Vercel", level: 85 },
+    { name: "Git & GitHub", level: 85 },
+  ],
+  security: [
+    { name: "Helmet.js", level: 80 },
+    { name: "CORS & Rate Limiting", level: 85 },
+    { name: "Bcrypt & CSRF", level: 80 },
+    { name: "Input Validation", level: 85 },
+  ],
+  ai: [
+    { name: "Google Gemini", level: 85 },
+    { name: "Claude AI", level: 80 },
+    { name: "OpenRouter", level: 85 },
+    { name: "AI Workflow Automation", level: 85 },
+    { name: "Prompt Engineering", level: 85 },
   ],
 };
 
 export const projectsData = [
-  // 🔥 FEATURED PROJECTS
   {
     id: 1,
-    title: "Google Drive Enterprise Clone",
-    category: "Full Stack",
-    techStack: ["Node.js", "Express", "MongoDB", "Redis", "Supabase", "JWT"],
+    title: "AI Email Campaign Platform",
+    category: "AI Full Stack",
+    techStack: ["Node.js", "Express", "MongoDB", "Redis", "BullMQ", "Gemini", "OpenRouter"],
     description:
-      "A full-featured file storage and management system inspired by Google Drive, supporting multi-file uploads, folder hierarchy, caching, and secure authentication.",
+      "AI-powered email campaign platform that generates, reviews, and optimizes marketing emails using LLMs. Integrates Google Gemini and OpenRouter for personalized content, spam detection, and deliverability enhancement. Features async email processing via Redis and BullMQ, campaign/contact management, scheduling, analytics, and multi-provider support (SendGrid, Brevo, Mailgun, Postmark).",
     image:
-      "https://images.unsplash.com/photo-1649180549324-3e03951391aa?q=80&w=862&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    liveLink: "https://google-drive-ecru.vercel.app",
+      "https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=800&q=80",
+    liveLink: "https://ai-email-compaign-agent-project-fro.vercel.app",
     githubLink: "#",
     featured: true,
   },
   {
     id: 2,
-    title: "GalleryPro (Image Platform)",
-    category: "MERN Stack",
-    techStack: ["React", "Node.js", "MongoDB", "Redis", "Supabase", "Docker"],
+    title: "AI WhatsApp & E-Commerce Assistant",
+    category: "AI Full Stack",
+    techStack: ["Node.js", "Express", "MongoDB", "Gemini", "WhatsApp API", "LLM"],
     description:
-      "A high-performance image hosting platform with drag-and-drop uploads, search optimization, Redis caching, and secure authentication.",
+      "AI-powered communication platform integrating web chat, WhatsApp Business, and email into a unified customer support solution. Built an intelligent assistant capable of answering queries, retrieving product information, and providing store assistance using LLMs. Features e-commerce integration for AI-powered product search, pricing, inventory lookup, and multi-channel communication.",
     image:
-      "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80",
-    liveLink: "https://gallery-project-frontend.vercel.app",
+      "https://images.unsplash.com/photo-1682941664177-7920d0e59418?w=800&q=80",
+    liveLink: "https://fyp-xi-flame.vercel.app",
     githubLink: "#",
     featured: true,
   },
   {
     id: 3,
-    title: "TaskBoard (Kanban System)",
+    title: "GalleryPro",
     category: "MERN Stack",
-    techStack: ["React", "Node.js", "MongoDB", "Redis", "Supabase"],
+    techStack: ["React", "Node.js", "MongoDB", "Redis", "Supabase", "Docker", "JWT"],
     description:
-      "A dynamic Kanban task management system with drag-and-drop functionality, analytics, filtering, and optimized backend performance.",
+      "Production-ready MERN image management platform with secure authentication, cloud storage, and enterprise-grade backend architecture. Features Redis caching, Supabase Storage, Google OAuth, JWT with refresh token workflow, role-based authorization, drag-and-drop uploads, image optimization, favorites, filtering, and search.",
     image:
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
-    liveLink: "https://task-board-frontend-ten.vercel.app",
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80",
+    liveLink: "https://gallery-project-frontend.vercel.app",
     githubLink: "#",
     featured: true,
   },
-
-  // ⚡ OTHER FULL STACK PROJECTS
   {
     id: 4,
-    title: "E-Commerce Web App (Scatch)",
+    title: "Google Drive Enterprise",
+    category: "MERN Stack",
+    techStack: ["Node.js", "Express", "MongoDB", "Redis", "Supabase", "JWT", "Docker"],
+    description:
+      "Full-stack Google Drive clone supporting secure file storage, folder hierarchy, multi-file uploads, and enterprise-grade file management. Built with MongoDB Atlas, Redis caching, and Supabase Storage. Features JWT authentication, refresh token rotation, CSRF protection, recursive folder navigation, bulk downloads, favorites, indexed search, and automated trash lifecycle management.",
+    image:
+      "https://images.unsplash.com/photo-1649180549324-3e03951391aa?q=80&w=862&auto=format&fit=crop",
+    liveLink: "https://google-drive-ecru.vercel.app",
+    githubLink: "#",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "E-Commerce Platform",
     category: "Full Stack",
     techStack: ["Node.js", "Express", "MongoDB"],
     description:
@@ -103,55 +131,38 @@ export const projectsData = [
     featured: false,
   },
   {
-    id: 5,
-    title: "Task & Notes Management App",
+    id: 6,
+    title: "Authentication System",
+    category: "Full Stack",
+    techStack: ["Node.js", "Express", "JWT", "MongoDB"],
+    description:
+      "Secure authentication system with JWT, OAuth 2.0, role-based access control, and session management.",
+    image:
+      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80",
+    liveLink: "#",
+    githubLink: "#",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Task Management System",
     category: "Full Stack",
     techStack: ["Node.js", "Express", "MongoDB"],
     description:
-      "A backend-driven application for managing tasks and notes with user-specific data handling and API-based architecture.",
+      "A backend-driven application for managing tasks with user-specific data handling and API-based architecture.",
     image:
       "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=800&q=80",
     liveLink: "#",
     githubLink: "#",
     featured: false,
   },
-
-  // 🌐 FRONTEND PROJECTS
-  {
-    id: 6,
-    title: "Gallery UI (Frontend)",
-    category: "REACT",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    description:
-      "A responsive image gallery interface with modern layout and user-friendly interactions.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80",
-    liveLink: "#",
-    githubLink: "#",
-    featured: false,
-  },
-
-  // 🧠 JAVASCRIPT APPS
-  {
-    id: 7,
-    title: "AI Chatbot",
-    category: "JavaScript App",
-    techStack: ["JavaScript", "API"],
-    description:
-      "A chatbot interface integrating external AI APIs for conversational responses.",
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-    liveLink: "#",
-    githubLink: "#",
-    featured: false,
-  },
   {
     id: 8,
-    title: "Weather App",
+    title: "Weather Dashboard",
     category: "JavaScript App",
-    techStack: ["JavaScript", "API"],
+    techStack: ["JavaScript", "REST API"],
     description:
-      "A weather forecasting app fetching real-time data from external APIs.",
+      "A weather forecasting dashboard fetching real-time data from external APIs with responsive UI.",
     image:
       "https://images.unsplash.com/photo-1501973801540-537f08ccae7b?w=800&q=80",
     liveLink: "#",
@@ -160,13 +171,13 @@ export const projectsData = [
   },
   {
     id: 9,
-    title: "Currency Converter",
+    title: "AI Chatbot Interface",
     category: "JavaScript App",
-    techStack: ["JavaScript", "API"],
+    techStack: ["JavaScript", "AI API"],
     description:
-      "A simple tool for converting currencies using live exchange rate APIs.",
+      "A chatbot interface integrating external AI APIs for conversational responses.",
     image:
-      "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800&q=80",
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     liveLink: "#",
     githubLink: "#",
     featured: false,
@@ -178,13 +189,32 @@ export const experienceData = [
     id: 1,
     role: "Full Stack Developer Intern",
     company: "SolnetInfo",
-    duration: "Oct 2024 - Dec 2025",
+    duration: "Feb 2025 - Jul 2025",
     description: [
-      "Gained hands-on experience in full stack development using HTML, CSS, JavaScript, Node.js, Express, and MongoDB.",
-      "Developed backend APIs for handling authentication, data management, and CRUD operations.",
-      "Worked with real-world application architecture, focusing on scalable backend design and clean API structure.",
-      "Implemented authentication systems including JWT-based login flows and secure user session handling.",
-      "Collaborated on debugging, optimizing performance, and improving code structure in development projects.",
+      "Developed and maintained RESTful APIs and backend services using Node.js and Express.js",
+      "Designed MongoDB schemas, implemented CRUD operations, and optimized database queries for performance and scalability",
+      "Built authentication and authorization systems using JWT, secure session handling, and role-based access control",
+      "Integrated Redis caching to reduce database load and improve application response times",
+      "Structured backend applications using modular architecture, reusable services, and middleware-based routing patterns",
+      "Collaborated on frontend development using React.js and Tailwind CSS to deliver responsive user interfaces",
+    ],
+  },
+  {
+    id: 2,
+    role: "Junior Developer",
+    company: "SolnetInfo",
+    duration: "Aug 2025 - Mar 2026",
+    description: [
+      "Developed and maintained RESTful APIs and backend services using Node.js and Express.js",
+      "Designed MongoDB schemas, implemented CRUD operations, and optimized database queries for performance and scalability",
+      "Built authentication and authorization systems using JWT, secure session handling, and role-based access control",
+      "Integrated Redis caching to reduce database load and improve application response times",
+      "Structured backend applications using modular architecture, reusable services, and middleware-based routing patterns",
+      "Collaborated on frontend development using React.js and Tailwind CSS to deliver responsive user interfaces",
+      "Performed debugging, testing, validation, and performance optimization across full-stack applications",
+      "Contributed to production-level codebases by implementing new features, resolving bugs, and improving maintainability",
+      "Dockerized applications to ensure consistent development, testing, and deployment environments",
+      "Applied security best practices including input validation, error handling, and API protection mechanisms",
     ],
   },
 ];

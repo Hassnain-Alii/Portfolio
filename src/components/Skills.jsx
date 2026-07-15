@@ -37,10 +37,12 @@ const CSSMarquee = ({ children, reverse = false }) => (
 
 export const Skills = () => {
   const allSkills = [
-    ...skillsData.frontend,
     ...skillsData.backend,
+    ...skillsData.frontend,
     ...skillsData.database,
     ...skillsData.devops,
+    ...skillsData.security,
+    ...skillsData.ai,
   ];
 
   const half = Math.ceil(allSkills.length / 2);

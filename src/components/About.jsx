@@ -61,28 +61,28 @@ export const About = () => {
   const cards = [
     {
       icon: <Layout className="w-8 h-8 text-blue-400" />,
-      title: "Frontend Development",
+      title: "AI Integration",
       description:
-        "Crafting beautiful, responsive, and highly interactive user interfaces using React, Tailwind CSS, and modern animations.",
+        "Integrating LLMs like Google Gemini and OpenRouter into production applications for intelligent automation, content generation, and smart assistance.",
     },
     {
       icon: <Server className="w-8 h-8 text-green-400" />,
       title: "Backend Architecture",
       description:
-        "Building scalable, secure, and blazing-fast RESTful APIs using Node.js, Express, and incorporating modern best practices.",
+        "Building scalable, secure, and high-performance RESTful APIs using Node.js, Express, Redis caching, and modular architecture patterns.",
     },
     {
       icon: <Database className="w-8 h-8 text-purple-400" />,
-      title: "Database Management",
+      title: "Full Stack Development",
       description:
-        "Designing efficient data models and managing complex aggregations with MongoDB and Mongoose.",
+        "Crafting responsive UIs with React and Tailwind, designing MongoDB schemas, and deploying production-ready MERN applications.",
     },
   ];
 
   const stats = [
     { label: "Years Experience", value: 2, suffix: "+" },
     { label: "Projects Completed", value: 15, suffix: "+" },
-    { label: "Technologies", value: 10, suffix: "+" },
+    { label: "AI Integrations", value: 5, suffix: "+" },
   ];
 
   return (
@@ -90,7 +90,7 @@ export const About = () => {
       <div className="container mx-auto px-6">
         <SectionHeading
           title="About Me"
-          subtitle="Get to know me and what drives my passion for web development."
+          subtitle="AI-focused Full Stack Developer passionate about building intelligent, scalable web solutions."
         />
 
         <div className="flex flex-col lg:flex-row gap-16 items-center justify-between">
@@ -143,9 +143,10 @@ export const About = () => {
               Engineering{" "}
               <span className="text-gradient">Digital Experiences</span>
             </h3>
-            <p className="text-gray-400 text-lg mb-8 leading-relaxed">
+            <p className="text-gray-400 text-lg mb-6 leading-relaxed">
               {personalInfo.shortAbout}
             </p>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               {cards.map((card, index) => (

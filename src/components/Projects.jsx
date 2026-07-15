@@ -98,12 +98,24 @@ export const Projects = () => {
                     />
                     {/* Floating Action Buttons on hover */}
                     <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                      <a href={project.liveLink} className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                        <ExternalLink size={20} />
-                      </a>
-                      <a href={project.githubLink} className="w-12 h-12 bg-black/70 text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors backdrop-blur-sm border border-white/20">
-                        <FaGithub size={20} />
-                      </a>
+                      {project.liveLink !== "#" ? (
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
+                          <ExternalLink size={20} />
+                        </a>
+                      ) : (
+                        <span className="w-12 h-12 bg-white/10 text-gray-600 rounded-full flex items-center justify-center cursor-not-allowed">
+                          <ExternalLink size={20} />
+                        </span>
+                      )}
+                      {project.githubLink !== "#" ? (
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-black/70 text-white rounded-full flex items-center justify-center hover:bg-accent transition-colors backdrop-blur-sm border border-white/20">
+                          <FaGithub size={20} />
+                        </a>
+                      ) : (
+                        <span className="w-12 h-12 bg-black/30 text-gray-600 rounded-full flex items-center justify-center cursor-not-allowed backdrop-blur-sm border border-white/5">
+                          <FaGithub size={20} />
+                        </span>
+                      )}
                     </div>
                   </div>
 
