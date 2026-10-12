@@ -80,7 +80,7 @@ export const About = () => {
   ];
 
   const stats = [
-    { label: "Years Experience", value: 2, suffix: "+" },
+    { label: "Years Experience", value: 1, suffix: "+" },
     { label: "Projects Completed", value: 15, suffix: "+" },
     { label: "AI Integrations", value: 5, suffix: "+" },
   ];
@@ -146,7 +146,6 @@ export const About = () => {
             <p className="text-gray-400 text-lg mb-6 leading-relaxed">
               {personalInfo.shortAbout}
             </p>
-
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               {cards.map((card, index) => (

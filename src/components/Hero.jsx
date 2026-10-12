@@ -53,7 +53,7 @@ export const Hero = () => {
     { text: "    backend: ['Node.js', 'Express'],", color: "text-accent-light" },
     { text: "    frontend: ['React', 'Tailwind'],", color: "text-blue-300" },
     { text: "    database: ['MongoDB', 'Redis'],", color: "text-emerald-400" },
-    { text: "    ai: ['Gemini', 'OpenRouter'],", color: "text-yellow-400" },
+    { text: "    ai: ['Claude', 'OpenRouter'],", color: "text-yellow-400" },
     { text: "  },", color: "text-white" },
     { text: "  open_to_work: true", color: "text-green-400" },
     { text: "};", color: "text-white" },
@@ -63,7 +63,7 @@ export const Hero = () => {
     { icon: <Terminal size={20} />, label: "Node.js", color: "text-green-400" },
     { icon: <Braces size={20} />, label: "React", color: "text-blue-400" },
     { icon: <Globe size={20} />, label: "MongoDB", color: "text-emerald-400" },
-    { icon: <Code2 size={20} />, label: "Gemini AI", color: "text-yellow-400" },
+    { icon: <Code2 size={20} />, label: "Claude AI", color: "text-yellow-400" },
   ];
 
   return (
