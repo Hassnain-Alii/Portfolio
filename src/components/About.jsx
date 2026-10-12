@@ -9,7 +9,7 @@ import {
 import CountUpLib from "react-countup";
 import { SectionHeading } from "./ui/SectionHeading";
 import { personalInfo } from "../data/portfolioData";
-import { Server, Database, Layout } from "lucide-react";
+import { Server, Database, Layout, Layers } from "lucide-react";
 
 // Handle CJS/ESM interop for react-countup
 const CountUp = CountUpLib.default || CountUpLib;
@@ -72,10 +72,16 @@ export const About = () => {
         "Building scalable, secure, and high-performance RESTful APIs using Node.js, Express, Redis caching, and modular architecture patterns.",
     },
     {
-      icon: <Database className="w-8 h-8 text-purple-400" />,
+      icon: <Database className="w-8 h-8 text-amber-400" />,
+      title: "Database & Cloud Storage",
+      description:
+        "Designing scalable MongoDB schemas, leveraging Redis caching for high performance, and managing cloud storage with Supabase and S3.",
+    },
+    {
+      icon: <Layers className="w-8 h-8 text-purple-400" />,
       title: "Full Stack Development",
       description:
-        "Crafting responsive UIs with React and Tailwind, designing MongoDB schemas, and deploying production-ready MERN applications.",
+        "Crafting responsive UIs with React and Tailwind, building seamless end-to-end features, and deploying production-ready MERN applications.",
     },
   ];
 
